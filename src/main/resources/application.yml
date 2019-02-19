@@ -1,0 +1,17 @@
+server:
+  port: ${SERVER_PORT:8090}
+
+spring:
+  data:
+    mongodb:
+      database: "javaltec"
+      host: ${MONGODB_HOST:localhost}
+      port: ${MONGODB_PORT:27017}
+management:
+  endpoint:
+    health:
+      show-details: when_authorized
+  endpoints:
+    web:
+      exposure:
+        include: "*"
